@@ -1,6 +1,7 @@
 ﻿using SecondExercise.Decorator;
 using SecondExercise.Player;
 using SecondExercise.Prototype;
+using SecondExercise.Adapter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,15 @@ namespace SecondExercise
 
             var treeDecorator = new TreeDecorator(tree);
             treeDecorator.Draw();
+
+            var player = GetPlayer();
+            player.Play("simple path");
+
+        }
+
+        public static Adapter.IPlayer GetPlayer()
+        {
+            return new Adapter.Adapter(new AdvancedPlayer());
         }
     }
 }
