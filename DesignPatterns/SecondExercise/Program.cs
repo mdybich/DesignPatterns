@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SecondExercise.Animals;
 
 namespace SecondExercise
 {
@@ -14,6 +15,13 @@ namespace SecondExercise
     {
         static void Main(string[] args)
         {
+            //Animals!
+            Dog max = new Dog();
+            Dog rex = new Pitbull();
+            max.MakeNoise();
+            rex.MakeNoise();
+
+
             var musicClient = new Client(new DigitalMusicFactory());
             musicClient.Play();
 
