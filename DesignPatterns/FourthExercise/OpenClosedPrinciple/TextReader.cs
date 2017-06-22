@@ -26,7 +26,7 @@ namespace FourthExercise.OpenClosedPrinciple
                         {
                             codeElements.Add(new Execution());
                         }
-                        else if(line.StartsWith("!command")
+                        else if(line.StartsWith("!command"))
                         {
                             codeElements.Add(new Command());
                         }
